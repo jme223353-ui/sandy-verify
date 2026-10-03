@@ -2,3 +2,17 @@
 
 /* Palette inspired by the supplied activation page. */
 body{background:linear-gradient(135deg,#0f0c29 0%,#302b63 45%,#1a1a4e 100%);color:#f4f2ff}header .brand small,.secure{color:#b8b5d5}.ambient.a{background:#667eea;opacity:.16}.ambient.b{background:#764ba2;opacity:.2}.intro h1 span{color:#b7a8f8}.intro p{color:#c2bedb}.intro p b{color:#eee9ff}.eyebrow{color:#c8bcff}.card{background:#fff;color:#252538;border-color:#ffffff22;box-shadow:0 32px 80px #0005}.primary{background:linear-gradient(135deg,#667eea,#764ba2)}footer{color:#b8b5d5}
+
+/* Sandy server identity: navy, sunset and gold. */
+body{isolation:isolate;background:#071724;color:#fff5dc}
+body::before{content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;background:radial-gradient(ellipse at 78% 20%,#d98b2540,transparent 48%),linear-gradient(135deg,#041421f2,#0b2539e8 55%,#061522f5),url('/sandy-logo.png') center/cover no-repeat}
+body::after{content:"";position:fixed;right:-10vw;top:10vh;width:65vw;height:80vh;z-index:-1;pointer-events:none;background:url('/sandy-logo.png') center/contain no-repeat;opacity:.11}
+.ambient.a{background:#eba936;opacity:.13}.ambient.b{background:#235878;opacity:.16}
+.brand small,.secure,footer{color:#b9b8ab}.secure svg{stroke:#d3b676}.eyebrow{color:#eac879}.eyebrow i{background:#e7b954}
+.intro h1 span{color:#edc56d}.intro p{color:#b9c4ca}.intro p b{color:#f6e4bc}
+.card{background:#fffdf6;color:#182b37;border:1px solid #d9b66066;box-shadow:0 28px 85px #0007,0 0 35px #dca83d09}
+.button,.button.discord{background:linear-gradient(135deg,#d7b05b,#f1ce7b);color:#142735;border:1px solid #f9df9c;box-shadow:0 5px 18px #bc8d3420}
+.button:hover{filter:brightness(1.06)}.button:disabled{opacity:.55}.button svg{fill:currentColor}
+.guild-icon{content:url('/sandy-logo.png');object-fit:contain!important;background:transparent!important;border-radius:50%!important}
+.status{background:#f5eedf;border-color:#e9dcc0;color:#8c702f}.intro h1{font-size:46px}
+@media(max-width:560px){body::after{width:110vw;right:-40vw;top:18vh;opacity:.07}.intro h1{font-size:36px}}
