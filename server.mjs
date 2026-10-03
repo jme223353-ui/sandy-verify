@@ -87,7 +87,7 @@ export function createApp({config={},fetchImpl=fetch,dbPath=':memory:',terms=JSO
    let path;try{path=decodeURIComponent(url.pathname);}catch{return send(res,400,{error:'path'});}
    const file=resolve(publicDir,'.'+(path==='/'?'/index.html':path));if(!file.startsWith(publicDir+'/'))return send(res,404,{error:'not_found'});
    let stat;try{stat=statSync(file);}catch{return send(res,404,{error:'not_found'});}if(!stat.isFile())return send(res,404,{error:'not_found'});
-   const types={'.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'application/javascript; charset=utf-8','.svg':'image/svg+xml','.woff2':'font/woff2'};
+   const types={'.gif':'image/gif','.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'application/javascript; charset=utf-8','.svg':'image/svg+xml','.woff2':'font/woff2'};
    res.writeHead(200,{'Content-Type':types[extname(file)]||'application/octet-stream','Cache-Control':file.endsWith('index.html')?'no-store':'public, max-age=300'});res.end(req.method==='HEAD'?undefined:readFileSync(file));
   }catch(e){if(url.pathname==='/auth/callback')return redirect(res,'/?error=login_failed');send(res,e.discord?503:400,{error:e.discord?(e.status===403?'bot_permissions':'discord_unavailable'):'request_failed'});}
  }
